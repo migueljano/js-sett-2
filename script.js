@@ -14,39 +14,57 @@
         Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
      */
  
-       const addClassToTitle = function () {
-        const title = document.getElementById('titleH1')
-        title.classList.add('myHeading');
-       }    
+      //  const addClassToTitle = function () {
+      //   const title = document.getElementById('h1')
+      //   title.classList.add('myHeading');
+      //  }    
        
-       addClassToTitle();
+      //  addClassToTitle();
        /* ESERCIZIO 3
         Scrivi una funzione che cambi il testo dei p figli di un div
+        //ci sono due div con i figli p da cambiare
        */
- 
-       const changePcontent = function () {
-        const subDiv = document.querySelector('div p');
-        subDiv.innerText = 'Ho appena cambiato il i figli di un div!';
-       }
- 
-       changePcontent();
+
+          const changePcontent = function () {
+            const changeP = document.querySelectorAll("div p");
+            for (let i = 0; i < changeP.length; i++) {
+              changeP[i].innerText = "ciao a tutti!";
+            }
+          };
+          changePcontent();
+  
+        
        /* ESERCIZIO 4
         Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
        */
  
-       const changeUrls = function () {}
- 
+      //  const changeUrls = function () {
+      //  const link = document.querySelectorAll("a:not(footer a)")
+      //  for (let i = 0; link.length; i++) {
+      //   link[i].href = "https://www.google.com"
+      //  }
+      // }
+      //  changeUrls()
        /* ESERCIZIO 5
         Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
      */
- 
-       const addToTheSecond = function () {}
- 
+     
+       const addToTheSecond = function () {
+        const secondList = document.getElementById("secondList")
+        const li = document.createElement("li")
+        li.innerText = 'Nueaksndk'
+        secondList.appendChild(li)
+    
+       }
+       addToTheSecond()
+  
        /* ESERCIZIO 6
         Scrivi una funzione che aggiunga un paragrafo al primo div
      */
  
-       const addParagraph = function () {}
+       const addParagraph = function () {
+        const primoDiv = document.querySelectorAll('div:not()')
+       }
  
        /* ESERCIZIO 7
         Scrivi una funzione che faccia scomparire la prima lista non ordinata
